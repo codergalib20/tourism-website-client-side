@@ -20,7 +20,7 @@ const Service = ({service}) => {
               </div>
               <p className="pt-3 pb-8 text-md text-yellow-700 font-medium">{description.substring(0, 130)}</p>
               <div>
-              <Link className="smooth-animation bg-yellow-50 hover:bg-yellow-800 text-yellow-900 hover:text-yellow-50 border-2 border-yellow-900 py-2 px-8" to={`/services/${_id}`}>Order Page</Link>
+              <Link className="smooth-animation bg-yellow-50 hover:bg-yellow-800 text-yellow-900 hover:text-yellow-50 border-2 border-yellow-900 py-2 px-8" to={`/services/${_id}`}>Book Ticket</Link>
               </div>
             </div>
         </Zoom>

@@ -66,6 +66,8 @@ const AllOrderManage = () => {
                 }
             });
      }
+
+     
     return (
         <div className="py-10 container mx-auto min-h-screen ">
             <div className="bg-yellow-900 py-8">  
@@ -97,6 +99,13 @@ const AllOrderManage = () => {
                                     <h2 className="text-2xl font-bold text-yellow-900 py-1">{order.serviceName}</h2>
                                     <h1 className="text-md font-bold text-yellow-900">Price : {order.price}</h1>
                                     <p className="text-base font-medium text-yellow-900">{order.description.substring(0, 200)}</p>
+                                </div>
+                                <div className=" mb-4">
+                                   <strong className="text-md text-yellow-900">Home Towns : {order.towns}</strong>
+                                   <br />
+                                   <strong className="text-md text-yellow-900">Country : {order.country}</strong>
+                                   <br />
+                                   <strong className="text-md text-yellow-900">Post Office : {order.post_office}</strong>
                                 </div>
                                 </div>
                             </div>

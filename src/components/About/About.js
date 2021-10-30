@@ -12,7 +12,7 @@ const About = () => {
          setImage('https://i.ibb.co/0rPDcYp/tour-3-scaled.jpg'); 
     }
     return (
-        <div className="min-h-screen p-10 ">
+        <div className="min-h-screen py-4 md:p-10 ">
             <div>
                 <div className="px-2 grid grid-cols-1 lg:grid-cols-2 gap-6">
                     <div>
