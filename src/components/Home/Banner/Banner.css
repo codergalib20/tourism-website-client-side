@@ -1,0 +1,21 @@
+.banner-span-text-style::before {
+  content: "";
+  background: url(https://i.ibb.co/NZXm8qL/title-decor-1-1.png);
+  height: 30px;
+  width: 100%;
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  transform: rotate(179deg);
+}
+
+@media only screen and (max-width: 992px) {
+  .banner-span-text-style::before {
+    bottom: 0px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .banner-span-text-style::before {
+    bottom: -20px;
+  }
+}
