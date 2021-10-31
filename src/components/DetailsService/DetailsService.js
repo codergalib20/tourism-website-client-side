@@ -19,17 +19,16 @@ const DetailsService = () => {
         .then(data => setService(data))
         .catch(error => console.log(error))
     },[])
-
+    
     const { register, handleSubmit } = useForm();
     const {url, description, name, price} = service
+    console.log(user);
     const onSubmit = data => {
-        console.log(data)
         data.status = 'Pending'
         data.serviceName = name
         data.price = price;
         data.description = description;
         data.url = url;
-        data.imgUrl = user.photoUrl
         axios.post('https://evening-ridge-39840.herokuapp.com/addOrders', data)
         .then(res => {
             if(res.data.insertedId){
@@ -51,6 +50,7 @@ const DetailsService = () => {
                <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 md:grid-cols-2 gap-2">
                     <input className="border-2 border-red-500 py-1 px-3"  value={user.displayName} placeholder="Name" {...register("name", { required: true})} />
                     <input className="border-2 border-red-500 py-1 px-3"  value={user.email} placeholder="Email" {...register("email", { required: true })} />
+                    <input className="border-2 border-red-500 py-1 px-3"  value={user.photoURL} placeholder="user image url" {...register("userImg", { required: true })} />
                     <input className="border-2 border-red-500 py-1 px-3" placeholder="home towns" {...register("towns", { required: true })} />
                     <input className="border-2 border-red-500 py-1 px-3" placeholder="Country" {...register("country", { required: true })} />
                     <input className="border-2 border-red-500 py-1 px-3" placeholder="Post office Serial" {...register("post_office", { required: true })} />
