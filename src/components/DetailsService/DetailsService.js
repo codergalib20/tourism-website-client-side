@@ -35,7 +35,7 @@ const DetailsService = () => {
                 swal('Wow!', 'You\'r Order added.', 'success')
             }
           })
-        };
+       };
     
     return (
         <div className="py-10 min-h-screen">

@@ -33,11 +33,11 @@ function App() {
               <About/>
               <Footer/>
             </Route>
-            <Route path="/addService">
+            <PrivateRoute path="/addService">
               <Header/>
                <AddNewService/>
                <Footer/>
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <Header/>
               <Login></Login>
@@ -48,16 +48,16 @@ function App() {
               <DetailsService/>
               <Footer/>
             </PrivateRoute>
-            <Route path="/myOrder">
+            <PrivateRoute path="/myOrder">
               <Header/>
               <MyOrders/>
               <Footer/>
-            </Route>
-            <Route path="/allOrderManage">
+            </PrivateRoute>
+            <PrivateRoute path="/allOrderManage">
               <Header/>
               <AllOrderManage/>
               <Footer/>
-            </Route>
+            </PrivateRoute>
             <Route path="*">
               <NotPage/>
             </Route>

@@ -95,7 +95,7 @@ const AllOrderManage = () => {
                                     <img className="w-full transform scale-100 hover:scale-110 smooth-animation cursor-pointer" src={order.url} alt="" />
                                 </div>
                                 <div className="py-3">
-                                    <h3>Status : {order.status}</h3>
+                                    <h3 className="text-xl font-bold text-yellow-900">Status : {order.status}</h3>
                                     <h2 className="text-2xl font-bold text-yellow-900 py-1">{order.serviceName}</h2>
                                     <h1 className="text-md font-bold text-yellow-900">Price : {order.price}</h1>
                                     <p className="text-base font-medium text-yellow-900">{order.description.substring(0, 200)}</p>

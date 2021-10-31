@@ -14,14 +14,23 @@ const AddNewService = () => {
                 swal("Wow!", "You're Service has been added!", "success");
                 reset()
               }
-          })
+          })  
     };
+
+    const onchangeDescription = e => {
+        console.log(e.target.value)
+    }
+
+
+    
     return (
         <div className="flex items-center justify-center bg-yellow-900 min-h-screen">
             <div className="bg-yellow-900 w-full max-w-xl p-8">
                 <form className="w-full" onSubmit={handleSubmit(onSubmit)}>
-                    <input className="border w-full border-none outline-none px-4 py-1 border-black mt-4 text-base placeholder-yellow-500" {...register("name", { required: true})} placeholder="Tour area name"/>
-                    <input className="border w-full border-none outline-none px-4 py-1 border-black mt-4 text-base placeholder-yellow-500" {...register("description", { required: true, minLength: 150})} placeholder="Description min 100 letter"/>
+                    <span></span>
+                    <input className="border w-full border-none outline-none px-4 py-1 border-black mt-4 mb-4 text-base placeholder-yellow-500" {...register("name", { required: true})} placeholder="Tour area name"/>
+                    <span className="text-yellow-400 text-base">The description expects min 150 letters</span>
+                    <input  className="border w-full border-none outline-none px-4 py-1 border-black text-base placeholder-yellow-500" {...register("description", { required: true, minLength: 150})} placeholder="Description min 100 letter"/>
                     <input className="border w-full border-none outline-none px-4 py-1 border-black mt-4 text-base placeholder-yellow-500" {...register("url",{ required: true})} placeholder="Image Url"/>
                     <input className="border w-full border-none outline-none px-4 py-1 border-black mt-4 text-base placeholder-yellow-500" type="number" {...register("price",{ required: true})} placeholder="Price"/>
                     <input className="border w-full border-none outline-none px-4 py-1 border-black mt-4 text-base placeholder-yellow-500" type="number" {...register("age")} placeholder="Age"/>

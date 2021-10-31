@@ -56,6 +56,7 @@ const MyOrders = () => {
                         <img className="w-full" src={order.url} alt="" />
                     </div>
                     <div className="py-3 md:py-0">
+                        <h1 className="text-2xl text-yellow-900 font-bold">Status : {order.status}</h1>
                         <h2 className="text-xl md:text-2xl text-justify font-medium">{order.serviceName}</h2>
                         <h1 className="text-2xl text-justify">Price : {order.price}</h1>
                         <p className="text-md text-justify">{order.description.substring(1, 150)}</p>
